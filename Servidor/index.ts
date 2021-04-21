@@ -1,5 +1,7 @@
+import Server from './classes/server';
 
+const server = new Server();
 
-const nombre = 'Bryan Alonso Valencia'
-
-console.log(`Mi nombre es ${ nombre }`);
+server.start( () => {
+    console.log(`Servidor corriendo en el puerto ${ server.port }`);
+});
